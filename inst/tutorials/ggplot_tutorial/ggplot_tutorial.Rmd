@@ -45,8 +45,10 @@ This is just a guide for you to start with `ggplot()`, but you can play with the
  
  The dataset we will be using is the star data set, it captures a number of measures concerning class size, students' maths and reading scores and other factors during early school grades. You can find the codebook through this link: https://www.rdocumentation.org/packages/AER/versions/1.2-9/topics/STAR
  
-```{r data read in, include=FALSE}
-star <- readr::read_csv("https://drmankin.github.io/disc_stats/star.csv")
+```{r data read in, include=FALSE, eval=TRUE}
+#star <- readr::read_csv("https://drmankin.github.io/disc_stats/star.csv")
+
+star <- readr::read_csv("./data/star.csv")
 
 #star <- dplyr::select(starts_with())
 ```
