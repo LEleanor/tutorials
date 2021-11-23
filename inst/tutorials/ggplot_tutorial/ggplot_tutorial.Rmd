@@ -5,6 +5,7 @@ output:
     progressive: true
     allow_skip: true
 runtime: shiny_prerendered
+description: "Learn how to use a basic structure to make a variety of plots, scatterplots, bargraphs, violin plots, boxplots and raincloud plots. Alongside you can learn how to use colour, change scales and other fun tricks with ggplot2"
 ---
 <!--progressive: true = reader can't see the beyond the current 3rd header (###) without "completing" the shown exercises
     allow_skip; true = reader can skip doing the exercise if they want by clicking "continue" --> 
@@ -79,13 +80,10 @@ knitr::include_graphics("./images/ggplot_structure.png")
 All basic `ggplot` graphs can be built with the structure shown above.
 
 
-The first line setting up the ‘canvas’ for your graph to be mapped onto.
-
-The second line allows you to add a layer and define how you want your data to be represented (by a scatterplot, histogram or other.)
-
-In the third line you can add additional layers, e.g. other types of data representations or error bars. But you can also add or change the title of your graph, the axis labels, edit the axis scales and much more.
-
-Lastly you can add a theme to your graph, which allows you to change the look of the overall graph.  
+> - The first line setting up the ‘canvas’ for your graph to be mapped onto.
+> - The second line allows you to add a layer and define how you want your data to be represented (by a scatterplot, histogram or other.)
+> - In the third line you can add additional layers, e.g. other types of data representations or error bars. But you can also add or change the title of your graph, the axis labels, edit the axis scales and much more.
+> - Lastly you can add a theme to your graph, which allows you to change the look of the overall graph.  
 
 
 #### Building the first graph
@@ -277,6 +275,8 @@ In the following parts of this tutorial you can learn how to make a bargraph, vi
 
 ## Bargraphs and colours
 
+### The basics off a bargraph
+
 Now that we had a look at the basic structure of `ggplots` lets try out some new things. 
 
 First we will try to make a bargraph showing how many people in first grade where in each type of STAR class type (regular, regular with aid or small). 
@@ -348,7 +348,9 @@ ggplot2::ggplot(data = star, aes(x = star1)) +
   theme_minimal()
 ```
 
+
 ### Adding colour
+
 
 Now all that is left is adding the colours, we can do this by telling `R` based on which variable we want out graph to be coloured. Here we are colouring the graph based on the star1 variable. We do this by adding `fill = variable_name` to the `aes()` function in out setup line. 
 
@@ -408,7 +410,9 @@ ggplot2::ggplot(data = star, aes(x = math1, y= math2, colour = gender)) +
 
 You now can easily see the data points split by gender. This can be used with all types of graphs, allowing you to add another dimention to them, but keeping the original representation.
 
+
 ### Viridis package for colour readability and accessibility
+
 
 <!-- show the viridis package and use on bargraph-->
 
@@ -484,6 +488,8 @@ ggplot2::ggplot(data = star, aes(x = math1, y= math2, colour = gender)) +
 Amazing! Now you are able to make colourful and readable plots for everyone!
 
 ## Violin plots and scale limits
+
+### The basics of Violin plots
 
 Violin plots are a grat way to quickly get an overview of data means and distributions, especially when comparing multiple groups.
 
@@ -563,6 +569,8 @@ ggplot2::ggplot(data = star, aes(x = star3, y = math3)) +
 When interpreting data you would read this plot very differently to the previous one.
 
 ## Boxplot and facets
+
+### Build a boxplot
 
 A different way to visualise data with a mean and distribution are boxplots. 
 
@@ -653,6 +661,8 @@ ggplot2::ggplot( data = star, aes(x = star2, y = math2)) +
 Amazing! Now that we have a good number of fun graphs we can make to understand our data, let's do something to combine them and make it even more exciting!
 
 ## Raincloud plots
+
+### Let's put it all together
 
 We all saw it coming, now that we have had a look at all the basic building blocks of raincloud plots, we have to combine them! 
 
