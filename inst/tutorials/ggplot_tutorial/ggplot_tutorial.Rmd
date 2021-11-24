@@ -48,9 +48,11 @@ This is just a guide for you to start with `ggplot()`, but you can play with the
 ```{r data read in, include=FALSE, eval=TRUE}
 #star <- readr::read_csv("https://drmankin.github.io/disc_stats/star.csv")
 
-star <- readr::read_csv("data/star.csv")
+#star <- readr::read_csv("data/star.csv")
 
 #star <- dplyr::select(starts_with())
+
+star <- tutorials::star
 ```
 
 To get an idea of the data, let's have a look at it. The data is save in `star`.
