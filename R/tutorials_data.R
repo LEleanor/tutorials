@@ -7,4 +7,4 @@
 #'
 #'
 #' @source \url{https://www.rdocumentation.org/packages/AER/versions/1.2-9/topics/STAR}
-"diamonds"
+"star"
