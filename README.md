@@ -5,4 +5,5 @@ This is a small package including a ggplot tutorial. You will learn the basic st
 To run the package and the tutorial run the code below: 
 
 devtools::install_github("LEleanor/tutorials")
+
 learnr::run_tutorial("ggplot_tutorial", "tutorials")
