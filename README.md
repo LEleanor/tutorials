@@ -4,7 +4,7 @@ This is a small package including a ggplot tutorial. You will learn the basic st
 
 To run the package and the tutorial run the code below: 
 
-install.packages("detools")
+install.packages("devtools")
 
 install.packages("learnr")
 
